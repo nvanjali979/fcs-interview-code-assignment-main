@@ -157,14 +157,12 @@ class ArchiveWarehouseUseCaseTest {
     }
 
     @Test
-    @DisplayName("throws 404 for an empty BU code that resolves to nothing")
-    void throws404_whenBuCodeIsEmptyString() {
-      when(warehouseStore.findByBusinessUnitCode("")).thenReturn(null);
-
+    @DisplayName("throws 400 for an empty BU code – invalid input rejected before DB lookup")
+    void throws400_whenBuCodeIsEmptyString() {
       WebApplicationException ex =
           assertThrows(WebApplicationException.class, () -> useCase.archive(placeholder("")));
 
-      assertEquals(404, ex.getResponse().getStatus());
+      assertEquals(400, ex.getResponse().getStatus());
     }
   }
 }
