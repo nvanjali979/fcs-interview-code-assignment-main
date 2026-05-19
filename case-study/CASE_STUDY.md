@@ -8,8 +8,8 @@
 **Questions you may have and considerations:**
 
 **Challenges:**
-Some costs (labor, inventory) are easy to link to a specific Warehouse or Store. Others
-(transportation, utilities) are shared and need a fair split rule — for example, by order volume
+Some costs like labor, inventory etc are easy to link to a specific Warehouse or Store. Others like
+transportation, utilities etc are shared and need a fair split rule — for example, by order volume
 or floor space. Choosing the wrong split method gives misleading cost reports.
 
 **Key questions to clarify first:**
